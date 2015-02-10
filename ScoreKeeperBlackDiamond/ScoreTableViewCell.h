@@ -13,13 +13,17 @@
 
 @interface ScoreTableViewCell : UITableViewCell
 
-@property (nonatomic, weak) id<ScoreTableViewCellDelegate>delegate;
+@property (nonatomic, strong) NSIndexPath *indexPathSelected;
 
-@end
 
-@protocol ScoreTableViewCellDelegate <NSObject>
 
-//method
-- (void)scoreTracker:(UILabel *)scoreCount cell:(ScoreTableViewCell *)cell;
+//@property (nonatomic, weak) id<ScoreTableViewCellDelegate>delegate;
+//
+//@end
+//
+//@protocol ScoreTableViewCellDelegate <NSObject>
+//
+////method
+//- (void)scoreTracker:(UILabel *)scoreCount cell:(ScoreTableViewCell *)cell;
 
 @end

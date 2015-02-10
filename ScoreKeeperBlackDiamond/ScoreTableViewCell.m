@@ -8,11 +8,12 @@
 
 #import "ScoreTableViewCell.h"
 
-@interface ScoreTableViewCell() <ScoreTableViewCellDelegate>
+@interface ScoreTableViewCell()
 
 @property (nonatomic, strong) UILabel *scoreCount;
 @property (nonatomic, strong) UITextField *nameInput;
 @property (nonatomic, strong) UIStepper *scoreStepper;
+@property (nonatomic, strong) UINavigationItem *navigationItem;
 
 @end
 
@@ -33,6 +34,7 @@ static CGFloat topMargin = 15;
         
         self.scoreCount = [[UILabel alloc] initWithFrame:CGRectMake(190, topMargin, 30, 30)];
         [self.scoreCount setBackgroundColor:[UIColor cyanColor]];
+        self.scoreCount.text = @"0";
         self.scoreCount.textAlignment = NSTextAlignmentCenter;
         self.scoreCount.layer.cornerRadius = 5.0;
         self.scoreCount.layer.masksToBounds = YES;
@@ -42,29 +44,19 @@ static CGFloat topMargin = 15;
         self.scoreStepper = [[UIStepper alloc] initWithFrame:CGRectMake(250, topMargin, 50, 30)];
         self.scoreStepper.maximumValue = 1000;
         self.scoreStepper.minimumValue = -100;
-        [self.scoreStepper addTarget:self action:@selector(scoreCount:cell:) forControlEvents:UIControlEventValueChanged];
-        
+        [self.scoreStepper addTarget:self action:@selector(scoreChange:) forControlEvents:UIControlEventValueChanged];
         [self.contentView addSubview:self.scoreStepper];
         
-        
         return self;
-        
-        
     }
 
--(void)scoreTracker:(UILabel *)scoreCount cell:(ScoreTableViewCell *)cell
-{
-//    UIStepper *stepper = sender;
-//    NSInteger index = stepper.tag;
-//    double scoreValue = [stepper value];
-    
-    
+- (void)scoreChange:(id)sender {
+    double value = [self.scoreStepper value];
+    self.scoreCount.text = [NSString stringWithFormat:@"%d", (int)value];
 }
 
-//- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-//    [super setSelected:selected animated:animated];
-//
-//    // Configure the view for the selected state
-//}
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+}
 
 @end
