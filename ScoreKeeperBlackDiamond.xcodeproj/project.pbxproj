@@ -10,10 +10,10 @@
 		FFB3FDDA1A8577380082E752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB3FDD91A8577380082E752 /* main.m */; };
 		FFB3FDDD1A8577380082E752 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB3FDDC1A8577380082E752 /* AppDelegate.m */; };
 		FFB3FDE01A8577380082E752 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB3FDDF1A8577380082E752 /* ViewController.m */; };
-		FFB3FDE31A8577380082E752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB3FDE11A8577380082E752 /* Main.storyboard */; };
 		FFB3FDE51A8577380082E752 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB3FDE41A8577380082E752 /* Images.xcassets */; };
 		FFB3FDE81A8577380082E752 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFB3FDE61A8577380082E752 /* LaunchScreen.xib */; };
 		FFB3FDF41A8577380082E752 /* ScoreKeeperBlackDiamondTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB3FDF31A8577380082E752 /* ScoreKeeperBlackDiamondTests.m */; };
+		FFB3FDFF1A8578DB0082E752 /* ScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB3FDFE1A8578DA0082E752 /* ScoreTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +34,13 @@
 		FFB3FDDC1A8577380082E752 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FFB3FDDE1A8577380082E752 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FFB3FDDF1A8577380082E752 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FFB3FDE21A8577380082E752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFB3FDE41A8577380082E752 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FFB3FDE71A8577380082E752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FFB3FDED1A8577380082E752 /* ScoreKeeperBlackDiamondTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreKeeperBlackDiamondTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB3FDF21A8577380082E752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB3FDF31A8577380082E752 /* ScoreKeeperBlackDiamondTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreKeeperBlackDiamondTests.m; sourceTree = "<group>"; };
+		FFB3FDFD1A8578DA0082E752 /* ScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreTableViewCell.h; sourceTree = "<group>"; };
+		FFB3FDFE1A8578DA0082E752 /* ScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +86,8 @@
 				FFB3FDDC1A8577380082E752 /* AppDelegate.m */,
 				FFB3FDDE1A8577380082E752 /* ViewController.h */,
 				FFB3FDDF1A8577380082E752 /* ViewController.m */,
-				FFB3FDE11A8577380082E752 /* Main.storyboard */,
+				FFB3FDFD1A8578DA0082E752 /* ScoreTableViewCell.h */,
+				FFB3FDFE1A8578DA0082E752 /* ScoreTableViewCell.m */,
 				FFB3FDE41A8577380082E752 /* Images.xcassets */,
 				FFB3FDE61A8577380082E752 /* LaunchScreen.xib */,
 				FFB3FDD71A8577380082E752 /* Supporting Files */,
@@ -199,7 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB3FDE31A8577380082E752 /* Main.storyboard in Resources */,
 				FFB3FDE81A8577380082E752 /* LaunchScreen.xib in Resources */,
 				FFB3FDE51A8577380082E752 /* Images.xcassets in Resources */,
 			);
@@ -221,6 +222,7 @@
 			files = (
 				FFB3FDE01A8577380082E752 /* ViewController.m in Sources */,
 				FFB3FDDD1A8577380082E752 /* AppDelegate.m in Sources */,
+				FFB3FDFF1A8578DB0082E752 /* ScoreTableViewCell.m in Sources */,
 				FFB3FDDA1A8577380082E752 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +246,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FFB3FDE11A8577380082E752 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFB3FDE21A8577380082E752 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FFB3FDE61A8577380082E752 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -412,6 +406,7 @@
 				FFB3FDF91A8577380082E752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFB3FDFA1A8577380082E752 /* Build configuration list for PBXNativeTarget "ScoreKeeperBlackDiamondTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +415,7 @@
 				FFB3FDFC1A8577380082E752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
