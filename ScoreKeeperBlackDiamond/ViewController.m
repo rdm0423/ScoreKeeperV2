@@ -22,11 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
 
     self.numberOfRows = 1;
-    
     self.title = @"Score Hero";
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
@@ -35,11 +32,11 @@
     [self.tableView registerClass:[ScoreTableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:self.tableView];
     
-    UIBarButtonItem *titleButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(addCell)];
-    UIBarButtonItem *removeButton = [[UIBarButtonItem alloc] initWithTitle:@"-" style:UIBarButtonItemStylePlain target:self action:@selector(removeCell)];
+    UIBarButtonItem *addPlayerButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(addCell)];
+    UIBarButtonItem *removePlayerButton = [[UIBarButtonItem alloc] initWithTitle:@"-" style:UIBarButtonItemStylePlain target:self action:@selector(removeCell)];
     
-    self.navigationItem.rightBarButtonItem = titleButton;
-    self.navigationItem.leftBarButtonItem = removeButton;
+    self.navigationItem.rightBarButtonItem = addPlayerButton;
+    self.navigationItem.leftBarButtonItem = removePlayerButton;
     
 }
 
